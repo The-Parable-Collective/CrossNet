@@ -19,7 +19,9 @@ public sealed class SpecificDaemonBuilder<T> : IClientDaemonBuilder, IServerDaem
 
     public ISpecificDaemonBuilder<ClientDaemon> BindPort(ushort portNumber)
     {
-        throw new NotImplementedException();
+        this.SetPort(portNumber);
+
+        return this;
     }
 
     public ClientDaemon Build()
@@ -91,14 +93,20 @@ public sealed class SpecificDaemonBuilder<T> : IClientDaemonBuilder, IServerDaem
         throw new NotImplementedException();
     }
 
+    /// <inheritdoc />
     ISpecificDaemonBuilder<ServerDaemon> ISpecificDaemonBuilder<ServerDaemon>.BindPort(ushort portNumber)
     {
-        throw new NotImplementedException();
+        this.SetPort(portNumber);
+
+        return this;
     }
 
+    /// <inheritdoc />
     ISpecificDaemonBuilder<PeerDaemon> ISpecificDaemonBuilder<PeerDaemon>.BindPort(ushort portNumber)
     {
-        throw new NotImplementedException();
+        this.SetPort(portNumber);
+
+        return this;
     }
 
     ServerDaemon ISpecificDaemonBuilder<ServerDaemon>.Build()
@@ -243,6 +251,11 @@ public sealed class SpecificDaemonBuilder<T> : IClientDaemonBuilder, IServerDaem
         this.SetIPv6(true);
 
         return this;
+    }
+
+    private void SetPort(ushort portNumber)
+    {
+        this.Daemon.PortNumber = portNumber;
     }
 
     private void SetTCPEnabled(bool isEnabled)
