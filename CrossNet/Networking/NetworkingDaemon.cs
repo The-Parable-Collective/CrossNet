@@ -9,4 +9,14 @@ public abstract class NetworkingDaemon
     internal NetworkingDaemon()
     {
     }
+
+    public bool AllowsIPv6 { get; internal set; }
+
+    public bool AllowsIPv4 { get; internal set; }
+
+    public bool UDPEnabled { get; internal set; }
+
+    public bool TCPEnabled { get; internal set; }
+
+    public bool SOCKS5Enabled { get; internal set; }
 }

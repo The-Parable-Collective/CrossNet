@@ -2,7 +2,7 @@
 
 namespace CrossNet.Configuration;
 
-public interface ISpecificDaemonBuilder<T> where T : NetworkingDaemon, new()
+public interface ISpecificDaemonBuilder<T> where T : NetworkingDaemon
 {
     /// <summary>
     /// Binds to the specified port.
