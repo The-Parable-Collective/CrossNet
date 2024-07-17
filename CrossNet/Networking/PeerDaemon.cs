@@ -3,6 +3,9 @@
 /// <summary>
 /// Represents this peer and brokers behavior, packet handling, and connections between itself and one or more peers.
 /// </summary>
-public sealed class PeerDaemon
+public sealed class PeerDaemon : NetworkingDaemon
 {
+    internal PeerDaemon() : base()
+    {
+    }
 }

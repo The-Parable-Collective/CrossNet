@@ -1,5 +1,7 @@
-﻿namespace CrossNet.Configuration;
+﻿using CrossNet.Networking;
 
-public interface IClientDaemonBuilder : ISpecificDaemonBuilder
+namespace CrossNet.Configuration;
+
+public interface IClientDaemonBuilder : ISpecificDaemonBuilder<ClientDaemon>
 {
 }

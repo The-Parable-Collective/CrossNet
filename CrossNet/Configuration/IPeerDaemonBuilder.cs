@@ -1,5 +1,7 @@
-﻿namespace CrossNet.Configuration;
+﻿using CrossNet.Networking;
 
-public interface IPeerDaemonBuilder : ISpecificDaemonBuilder
+namespace CrossNet.Configuration;
+
+public interface IPeerDaemonBuilder : ISpecificDaemonBuilder<PeerDaemon>
 {
 }

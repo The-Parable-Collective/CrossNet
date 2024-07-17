@@ -4,6 +4,9 @@
 /// Represents this server and brokers behavior, packet handling, and connections between itself and one or more clients. Can
 /// also peer between other servers.
 /// </summary>
-public sealed class ServerDaemon
+public sealed class ServerDaemon : NetworkingDaemon
 {
+    internal ServerDaemon() : base()
+    {
+    }
 }

@@ -6,4 +6,7 @@
 /// </summary>
 public abstract class NetworkingDaemon
 {
+    internal NetworkingDaemon()
+    {
+    }
 }
