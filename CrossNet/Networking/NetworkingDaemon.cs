@@ -1,4 +1,6 @@
-﻿namespace CrossNet.Networking;
+﻿using System.Net.Sockets;
+
+namespace CrossNet.Networking;
 
 /// <summary>
 /// Represents a networking daemon and brokers behavior, packet handling, and connections between itself and one or more
@@ -8,10 +10,19 @@ public abstract class NetworkingDaemon
 {
     private readonly List<NetConnection> connections = [];
 
+    private readonly Socket tcp4Socket = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+    private readonly Socket tcp6Socket = new(AddressFamily.InterNetworkV6, SocketType.Stream, ProtocolType.Tcp);
+
+    private readonly Socket udp4Socket = new(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
+    private readonly Socket udp6Socket = new(AddressFamily.InterNetworkV6, SocketType.Dgram, ProtocolType.Udp);
+
     internal NetworkingDaemon()
     {
     }
 
+    public bool IsRunning { get; private set; } = false;
     public bool AllowsIPv6 { get; internal set; }
 
     public bool AllowsIPv4 { get; internal set; }

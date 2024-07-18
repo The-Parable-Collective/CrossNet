@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNetServerDummy", "CrossNetServerDummy\CrossNetServerDummy.csproj", "{34C0E3B6-7CF2-40E8-A3AB-F27C06E08512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNetClientDummy", "CrossNetClientDummy\CrossNetClientDummy.csproj", "{6D068B02-5BC5-44CB-BE8B-9D87AC0D095D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{3CEFD45F-8A97-491A-B7C6-A809062090DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CEFD45F-8A97-491A-B7C6-A809062090DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEFD45F-8A97-491A-B7C6-A809062090DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C0E3B6-7CF2-40E8-A3AB-F27C06E08512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C0E3B6-7CF2-40E8-A3AB-F27C06E08512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C0E3B6-7CF2-40E8-A3AB-F27C06E08512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C0E3B6-7CF2-40E8-A3AB-F27C06E08512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D068B02-5BC5-44CB-BE8B-9D87AC0D095D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D068B02-5BC5-44CB-BE8B-9D87AC0D095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D068B02-5BC5-44CB-BE8B-9D87AC0D095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D068B02-5BC5-44CB-BE8B-9D87AC0D095D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
